@@ -1,5 +1,5 @@
 # Lista de precios Punto Smart
 
-Sitio estático compacto para GitHub Pages.
+Sitio estático para GitHub Pages.
 
-Archivo descargable incluido: LISTA-PRECIOS-PUNTO-SMART-27-6.xlsx
+URL esperada: https://gonzalorios83-cell.github.io/listaprecios/
