@@ -53,36 +53,39 @@
     .active{display:flex;align-items:center;gap:7px}
     .dot{width:7px;height:7px;border-radius:99px;background:var(--green);box-shadow:0 0 16px rgba(70,240,172,.7)}
     .hero{
-      display:grid;grid-template-columns:1.55fr .95fr;gap:12px;
+      display:grid;grid-template-columns:1.12fr .88fr;gap:12px;
       border:1px solid var(--line);background:linear-gradient(160deg,rgba(13,30,55,.94),rgba(9,16,33,.96));
-      border-radius:22px;padding:20px 22px;margin-bottom:12px
+      border-radius:22px;padding:18px 20px;margin-bottom:12px
     }
     .eyebrow{display:inline-flex;border:1px solid #2c5f86;color:#81d9ff;border-radius:999px;padding:6px 10px;font-size:12px;letter-spacing:.22em;margin-bottom:12px}
     h1{margin:0;font-size:clamp(32px,5vw,58px);line-height:.94;letter-spacing:-.055em;font-weight:950}
     .sub{margin:12px 0 0;color:#dce7f5;font-size:16px;font-weight:600}
     .note{margin:6px 0 0;color:var(--muted);font-size:13px}
     .ad{
-      align-self:stretch;border:1px solid #314d78;background:rgba(7,15,28,.68);border-radius:18px;padding:14px 15px;
-      display:flex;flex-direction:column;justify-content:center;gap:8px
+      align-self:stretch;border:1px solid #314d78;background:rgba(7,15,28,.68);border-radius:18px;padding:16px 16px;
+      display:flex;flex-direction:column;justify-content:center;gap:10px
     }
-    .ad-title{display:flex;align-items:center;gap:9px;font-weight:900;letter-spacing:.18em;font-size:13px}
-    .ad-title b{letter-spacing:.22em}
-    .ad p{margin:0;color:#c6d5e9;font-size:13px;line-height:1.45}
+    .ad-title{display:flex;align-items:center;gap:9px;font-weight:900;letter-spacing:.14em;font-size:13px;flex-wrap:wrap}
+    .ad-title b{letter-spacing:.18em}
+    .ad-calls{display:flex;flex-wrap:wrap;gap:7px}
+    .ad-call{display:inline-flex;align-items:center;padding:5px 9px;border-radius:999px;border:1px solid #35567d;background:rgba(16,33,58,.88);color:#d9edff;font-size:11px;font-weight:700;letter-spacing:.04em}
+    .ad p{margin:0;color:#d7e4f3;font-size:14px;line-height:1.5}
     .ad small{color:#81d9ff;font-size:12px}
     .brand-card{border:1px solid var(--line);border-radius:18px;background:rgba(10,22,39,.92);overflow:hidden;margin:10px 0}
     .brand-head{display:flex;justify-content:space-between;align-items:center;gap:10px;background:linear-gradient(90deg,rgba(19,38,62,.95),rgba(16,27,48,.95));border-bottom:1px solid var(--line);padding:8px 12px}
     .brand-head h2{margin:0;font-size:13px;letter-spacing:.24em;font-weight:850;color:#dff5ff}
     .brand-head span{font-size:12px;color:#94ddff;white-space:nowrap}
     .items{display:block}
-    .item{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;min-height:34px;padding:6px 12px;border-bottom:1px solid rgba(48,75,113,.52)}
+    .item{display:flex;align-items:center;gap:8px;min-height:34px;padding:6px 12px;border-bottom:1px solid rgba(48,75,113,.52)}
     .item:last-child{border-bottom:0}
-    .product{min-width:0;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+    .product{min-width:0;display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;flex:0 1 auto}
+    .spacer{flex:1 1 auto;min-width:16px;border-bottom:1px dotted rgba(159,176,198,.34);transform:translateY(1px)}
     .name{font-weight:760;color:#f2f7ff;font-size:13px}
     .color{font-size:12px;color:#91a5bd;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:420px}
     .offer{font-size:10px;font-weight:900;color:#061626;background:#5cf0ac;border-radius:999px;padding:2px 6px;letter-spacing:.04em}
     .price{
       min-width:86px;text-align:right;font-weight:900;font-size:13px;color:#eaf7ff;background:var(--price);
-      border:1px solid var(--priceLine);border-radius:9px;padding:4px 8px;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)
+      border:1px solid var(--priceLine);border-radius:9px;padding:4px 8px;box-shadow:inset 0 1px 0 rgba(255,255,255,.05);white-space:nowrap
     }
     .footer-ad{
       margin-top:12px;border:1px solid #2f5872;border-radius:16px;background:rgba(15,44,55,.55);padding:10px 13px;
@@ -99,10 +102,14 @@
       .hero{grid-template-columns:1fr;padding:15px;border-radius:18px}
       h1{font-size:34px;line-height:1}
       .sub{font-size:14px}
-      .ad{padding:11px 12px}
+      .ad{padding:12px}
+      .ad-title{font-size:12px}
+      .ad-call{font-size:10px;padding:4px 8px}
+      .ad p{font-size:13px;line-height:1.46}
       .brand-head{padding:8px 10px;align-items:flex-start;flex-direction:column;gap:2px}
       .brand-head span{font-size:11px}
-      .item{grid-template-columns:1fr auto;gap:8px;padding:6px 9px;min-height:33px}
+      .item{gap:7px;padding:6px 9px;min-height:33px}
+      .spacer{min-width:8px}
       .name{font-size:12px}
       .color{display:block;flex-basis:100%;font-size:11px;max-width:100%;white-space:nowrap}
       .price{font-size:12px;min-width:78px;padding:4px 6px}
@@ -133,6 +140,7 @@
       </div>
       <a class="ad" href="https://gonzalorios83-cell.github.io/home/" title="Ver Punto Smart OS">
         <div class="ad-title"><span>PROBA LAS VENTAJAS DE</span><b>PUNTO SMART OS</b></div>
+        <div class="ad-calls"><span class="ad-call">Interfaz en la nube</span><span class="ad-call">No recolecta tus datos</span><span class="ad-call">Versión Plus</span></div>
         <p>Sistema operativo hibrido alojado en la nube. con una interfaz simple y sencilla para navegar por la web. Uso en dispositivos donde Android ya no corre, y no recolecta tus datos.</p>
         <p>Si queres dar un paso mas tener la versión plus almacena toda tu info y configuracion de la interfaz en tu propio drive, pudiendo de esta manera abrirlo en cualquier lugar. Mas info haciendo click en el logo.</p>
       </a>
@@ -146,39 +154,51 @@
       <div class="items">
         <div class="item">
           <div class="product"><span class="name">iPhone 17 Pro 256GB eSIM</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 1.375</div>
         </div><div class="item">
           <div class="product"><span class="name">iPhone 17 Pro 256GB eSIM</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 1.390</div>
         </div><div class="item">
           <div class="product"><span class="name">iPhone 17 Pro 512GB eSIM</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 1.595</div>
         </div><div class="item">
           <div class="product"><span class="name">iPhone 17 Pro 512GB eSIM</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 1.610</div>
         </div><div class="item">
           <div class="product"><span class="name">iPhone 17 Pro 1TB eSIM</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 1.770</div>
         </div><div class="item">
           <div class="product"><span class="name">iPhone 17 Pro Max 256GB eSIM</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 1.410</div>
         </div><div class="item">
           <div class="product"><span class="name">iPhone 17 Pro Max 256GB eSIM</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 1.450</div>
         </div><div class="item">
           <div class="product"><span class="name">iPhone 17 Pro Max 512GB eSIM</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 1.675</div>
         </div><div class="item">
           <div class="product"><span class="name">iPhone 17 Pro Max 512GB eSIM</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 1.710</div>
         </div><div class="item">
           <div class="product"><span class="name">iPhone 17 Pro Max 1TB eSIM</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 1.945</div>
         </div><div class="item">
           <div class="product"><span class="name">iPhone 17 Pro Max 1TB eSIM</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 1.955</div>
         </div><div class="item">
           <div class="product"><span class="name">iPhone 17 Pro Max 1TB eSIM</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 1.965</div>
         </div>
       </div>
@@ -190,84 +210,111 @@
       <div class="items">
         <div class="item">
           <div class="product"><span class="name">Motorola E15 2/64GB</span><span class="color">Azul</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 120</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G05 4/64GB</span><span class="color">Rojo - Verde</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 130</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G05 4/128GB</span><span class="color">Verde</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 140</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G05 4/256GB S/CARG</span><span class="color">Blue - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 145</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G06 4/128GB</span><span class="offer">OFERTA</span><span class="color">Blue - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 135</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G06 Power 4/256GB</span><span class="color">Green - Khaki</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 145</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G15 4/512GB</span><span class="color">Azul - Celeste</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 195</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G17 4/256GB</span><span class="color">Celeste - Rosa</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 200</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G35 5G 4/128GB S/CARG</span><span class="color">Black - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 175</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G35 5G 8/128GB S/CARG</span><span class="color">Black</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 180</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G56 5G 8/256GB</span><span class="color">Gris</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 255</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G57 Power 5G 12/256GB S/CARG</span><span class="color">Cyan - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 280</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G67 4/256GB</span><span class="color">Gris - Lima</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 285</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G67 Power 5G 8/128GB</span><span class="color">Parachute</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 230</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G77 8/256GB</span><span class="color">Café - Esmeralda</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 295</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G86 5G 8/256GB</span><span class="color">Azul</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 275</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G86 5G 8/512GB</span><span class="color">Azul - Cereza - Verde</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 295</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G86 Power 5G 8/128GB</span><span class="color">Golden</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 255</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G86 Power 5G 8/512GB</span><span class="color">Blue - Green - Pink</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 305</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola G96 5G 8/128GB</span><span class="color">Ashleigh Blue - Dresden Blue - Greener</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 265</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola Edge 60 5G 12/512GB S/CARG</span><span class="color">Blue</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 385</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola Edge 60 Fusion 5G 8/256GB S/CARG</span><span class="color">Grey</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 295</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola Edge 60 Fusion 5G 12/256GB</span><span class="color">Amazonite - Blue - Slipstream - Zephyr</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 350</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola Edge 60 Pro 5G 8/256GB</span><span class="color">Sparkling Grape - Walnut</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 380</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola Edge 70 5G 8/256GB</span><span class="color">Green - Lily Pad</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 495</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola Edge 70 Fusion 5G 8/256GB</span><span class="color">Azul - Silhouette</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 460</div>
         </div><div class="item">
           <div class="product"><span class="name">Motorola Razr 50 5G 12/512GB</span><span class="color">Naranja</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 655</div>
         </div>
       </div>
@@ -279,57 +326,75 @@
       <div class="items">
         <div class="item">
           <div class="product"><span class="name">Samsung A06 4/64GB</span><span class="color">Black</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 112</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung A06 4/128GB</span><span class="color">Black - Blue</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 135</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung A07 4/128GB</span><span class="color">Black</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 140</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung A16 4/128GB</span><span class="color">Black - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 160</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung A17 4/128GB</span><span class="color">Black - Gray</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 180</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung A17 8/256GB</span><span class="color">Black - Gray - Blue</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 240</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung A26 5G 8/256GB</span><span class="color">Black - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 295</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung A36 5G 8/256GB</span><span class="color">Black - Lavender - Lime - White</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 355</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung A37 5G 6/128GB</span><span class="color">Lavender - Charcoal</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 340</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung A37 5G 8/256GB</span><span class="color">Violet - Gray Green - Charcoal</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 405</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung A56 5G 12/256GB</span><span class="color">Light Gray - Olive</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 450</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung A57 5G 12/256GB</span><span class="color">Lilac</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 490</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung S25 12/256GB</span><span class="color">Ice Blue - Navy</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 740</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung S25 FE 8/128GB</span><span class="color">Black</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 550</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung S25 Ultra 12/256GB</span><span class="color">Gray - Blue - White</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 975</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung S26 12/512GB</span><span class="color">Ice Blue</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 970</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung S26 Plus 12/256GB</span><span class="color">Black - Violet</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 1.040</div>
         </div><div class="item">
           <div class="product"><span class="name">Samsung S26 Plus 12/512GB</span><span class="color">Blue - White</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 1.185</div>
         </div>
       </div>
@@ -341,156 +406,207 @@
       <div class="items">
         <div class="item">
           <div class="product"><span class="name">Xiaomi Redmi A7 Pro 4/64GB</span><span class="color">Black - Blue - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 125</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Redmi A7 Pro 4/128GB</span><span class="color">Blue - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 135</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Redmi 15 6/128GB</span><span class="color">Black - Gray - Purple</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 190</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Redmi 15 8/256GB</span><span class="color">Black - Gray - Purple</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 225</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Redmi 15C 4/128GB</span><span class="color">Blue - Green - Orange</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 155</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Redmi 15C 4/256GB</span><span class="color">Black - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 170</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Redmi 15C 8/256GB</span><span class="color">Black - Blue - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 190</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 14 8/256GB</span><span class="color">Blue - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 230</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 14S 8/256GB</span><span class="color">Black - Blue - Purple</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 240</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 14 Pro+ 8/256GB</span><span class="color">Dorado</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 345</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 14 Pro+ 12/512GB</span><span class="color">Black</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 450</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 15 6/128GB</span><span class="color">Black - Blue - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 215</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 15 8/256GB</span><span class="color">Black - Blue - Green - Purple</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 240</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 15 8/512GB</span><span class="color">Azul - Black - Morado</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 270</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 15 5G 8/256GB</span><span class="color">Black - Purple</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 295</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 15 Pro 8/256GB</span><span class="color">Black - Blue - Titanium</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 300</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 15 Pro 12/512GB</span><span class="color">Blue</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 365</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 15 Pro 5G 8/256GB</span><span class="color">Black - Blue - Titanium</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 360</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 15 Pro 5G 8/512GB</span><span class="color">Black - Purple - Titanium</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 375</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 15 Pro 5G 12/512GB</span><span class="color">Black - Titanium</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 435</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 15 Pro+ 8/256GB</span><span class="color">Black - Mocha Brown</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 410</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 15 Pro+ 12/256GB</span><span class="color">Black - Blue - Mocha Brown</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 435</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Note 15 Pro+ 12/512GB</span><span class="color">Black - Blue - Mocha Brown</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 480</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco C81 Pro 4/128GB</span><span class="color">Black - Gold - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 150</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco C81 Pro 4/256GB</span><span class="color">Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 180</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco C85 8/256GB</span><span class="color">Black</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 190</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco M7 6/128GB</span><span class="color">Black - Silver</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 170</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco M7 8/256GB</span><span class="color">Silver</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 210</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco M8 5G 8/256GB</span><span class="color">Green - Silver</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 260</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco M8 5G 8/512GB</span><span class="color">Black - Green - Silver</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 310</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco M8S 5G 6/128GB</span><span class="color">Black - White</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 250</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco M8S 5G 8/256GB</span><span class="color">Black - White</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 280</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco M8 Pro 5G 8/256GB</span><span class="color">Black - Green - Silver</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 330</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco M8 Pro 5G 12/512GB</span><span class="color">Black - Green - Silver</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 395</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco X7 Pro 5G 8/256GB</span><span class="color">Black - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 395</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco X7 Pro 5G 12/512GB</span><span class="color">Black - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 425</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco X8 Pro 5G 8/256GB</span><span class="color">Black - Green - White</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 405</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco X8 Pro 5G 8/512GB</span><span class="color">Black - White</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 425</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco X8 Pro 5G 12/512GB</span><span class="color">Black - Green - White</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 485</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco X8 Pro Max 5G 12/256GB</span><span class="color">Black - Blue - Orange - White</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 535</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco X8 Pro Max 5G 12/512GB</span><span class="color">Black - Blue - White</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 600</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco F7 5G 12/512GB</span><span class="color">Black - Plata</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 540</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco F8 Pro 5G 12/512GB</span><span class="color">Negro - Titanium Silver</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 685</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco F8 Ultra 5G 12/256GB</span><span class="color">Black - Blue</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 825</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi Poco F8 Ultra 5G 16/512GB</span><span class="color">Black - Blue</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 940</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi 15T 5G 12/256GB</span><span class="color">Gray</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 555</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi 15T 5G 12/512GB</span><span class="color">Gray</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 695</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi 15T Pro 5G 12/256GB</span><span class="color">Gray</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 750</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi 17T 5G 12/512GB</span><span class="color">Negro - Violeta</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 770</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi 17T Pro 5G 12/512GB</span><span class="color">Azul - Negro</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 900</div>
         </div><div class="item">
           <div class="product"><span class="name">Xiaomi 17 Ultra 5G 16/512GB</span><span class="color">Black - Green</span></div>
+          <span class="spacer"></span>
           <div class="price">U$S 1.445</div>
         </div>
       </div>
