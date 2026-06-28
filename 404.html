@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#020713" />
+  <title>Lista de precios Punto Smart</title>
+  <meta name="description" content="Lista de precios Punto Smart. Precios orientativos sujetos a stock y actualización." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+  <style>
+:root{
+  --bg:#020713;--bg2:#071225;--panel:rgba(12,24,48,.78);--panel2:rgba(14,31,62,.92);
+  --line:rgba(134,171,255,.18);--line2:rgba(134,171,255,.32);--text:#eef5ff;--muted:#9fb0ca;
+  --soft:#d8e7ff;--accent:#5fd0ff;--accent2:#8b5cff;--ok:#54f3b1;--shadow:0 24px 80px rgba(0,0,0,.38);--radius:22px;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{
+  margin:0;min-height:100vh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);
+  background:radial-gradient(circle at 10% 0%,rgba(95,208,255,.22),transparent 28%),radial-gradient(circle at 90% 12%,rgba(139,92,255,.20),transparent 30%),linear-gradient(180deg,#020713 0%,#071225 45%,#020713 100%);
+}
+.shell{width:min(1060px,calc(100% - 28px));margin:0 auto;padding:18px 0 32px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 16px;margin-bottom:18px;border:1px solid var(--line);background:rgba(2,7,19,.72);backdrop-filter:blur(16px);border-radius:24px;box-shadow:var(--shadow)}
+.brand{display:flex;align-items:center;gap:12px;min-width:max-content}
+.brand-mark{width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 0 30px rgba(95,208,255,.35);position:relative}
+.brand-mark:after{content:"";position:absolute;inset:9px;border:2px solid rgba(255,255,255,.72);border-radius:9px}
+.brand-text{display:grid;line-height:1}
+.brand-text span{font-size:11px;letter-spacing:.28em;color:var(--muted)}
+.brand-text strong{font-size:19px;letter-spacing:.03em}
+.status{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 18px rgba(84,243,177,.8)}
+.hero{padding:28px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(180deg,rgba(13,27,56,.86),rgba(7,18,37,.72));box-shadow:var(--shadow);margin-bottom:14px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);border:1px solid var(--line2);border-radius:999px;padding:7px 10px;background:rgba(95,208,255,.08);margin-bottom:16px}
+h1{font-size:clamp(34px,5vw,58px);line-height:1;margin:0 0 10px;letter-spacing:-.05em}
+.lead{font-size:17px;line-height:1.5;color:var(--soft);margin:0;max-width:780px}
+.note{margin-top:14px;color:var(--muted);font-size:13px;line-height:1.45}
+.list-panel{border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.045);box-shadow:var(--shadow);overflow:hidden}
+.list-head{display:grid;grid-template-columns:150px 1fr;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line);color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.045)}
+.price-list{display:grid}
+.price-row{display:grid;grid-template-columns:150px 1fr;gap:10px;align-items:center;padding:13px 16px;border-bottom:1px solid rgba(134,171,255,.12)}
+.price-row:last-child{border-bottom:0}
+.price-row:nth-child(even){background:rgba(255,255,255,.025)}
+.price{font-weight:950;color:#06111d;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:999px;padding:8px 10px;text-align:center;white-space:nowrap}
+.product{color:var(--soft);line-height:1.35;font-size:15px}
+.footer{margin-top:18px;padding:16px;border:1px solid var(--line);border-radius:20px;background:rgba(2,7,19,.52);color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.footer b{color:var(--text)}
+@media (max-width:680px){
+  .topbar{align-items:flex-start}.status{display:none}.hero{padding:22px}.list-head{display:none}
+  .price-row{grid-template-columns:1fr;gap:8px;padding:14px}.price{width:max-content;min-width:104px;text-align:left}
+}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand" aria-label="Punto Smart OS">
+        <span class="brand-mark"></span>
+        <span class="brand-text"><span>PUNTO</span><strong>SMART OS</strong></span>
+      </div>
+      <div class="status"><span class="dot"></span><span>Lista activa</span></div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <span class="eyebrow">Punto Smart</span>
+        <h1>LISTA DE PRECIOS PUNTO SMART</h1>
+        <p class="lead">Precios orientativos. Consultar stock y actualización antes de comprar.</p>
+        <p class="note">Muestra parcial cargada desde archivo Excel.</p>
+      </section>
+
+      <section class="list-panel" aria-label="Lista de precios">
+        <div class="list-head"><span>Precio</span><span>Producto</span></div>
+        <div class="price-list">
+          <article class="price-row">
+            <div class="price">1.077 U$</div>
+            <div class="product">📱 15 PRO 1tb || black-white-blue</div>
+          </article>
+          <article class="price-row">
+            <div class="price">755 U$</div>
+            <div class="product">📱 16 128gb || ultramarine-teal-pink</div>
+          </article>
+          <article class="price-row">
+            <div class="price">855 U$</div>
+            <div class="product">📱 16 PLUS 128gb || white</div>
+          </article>
+          <article class="price-row">
+            <div class="price">1.166 U$</div>
+            <div class="product">📱 16 PRO 256gb || desert</div>
+          </article>
+          <article class="price-row">
+            <div class="price">1.055 U$</div>
+            <div class="product">📱 16 PRO 256gb desert abierto sin garantia</div>
+          </article>
+          <article class="price-row">
+            <div class="price">1.277 U$</div>
+            <div class="product">📱 16 PRO MAX 256gb || white-natural-desert</div>
+          </article>
+          <article class="price-row">
+            <div class="price">1.432 U$</div>
+            <div class="product">📱 16 PRO MAX 512gb || white-natural-desert</div>
+          </article>
+          <article class="price-row">
+            <div class="price">933 U$</div>
+            <div class="product">📱 17e 512gb || pink</div>
+          </article>
+          <article class="price-row">
+            <div class="price">1.921 U$</div>
+            <div class="product">📱 17 PRO MAX 1tb || blue</div>
+          </article>
+          <article class="price-row">
+            <div class="price">95 U$</div>
+            <div class="product">📲 Motorola E14 4G 64GB / 2GB RAM || Green Nacional - 12 meses garantía</div>
+          </article>
+          <article class="price-row">
+            <div class="price">107 U$</div>
+            <div class="product">📲 Motorola E15 4G 64GB / 2GB RAM || Morado Nacional - 12 meses garantía</div>
+          </article>
+          <article class="price-row">
+            <div class="price">129 U$</div>
+            <div class="product">📲 Motorola G05 4G 64GB / 4GB RAM || Rojo-Verde</div>
+          </article>
+          <article class="price-row">
+            <div class="price">132 U$</div>
+            <div class="product">📲 Motorola G05 4G 128GB / 4GB RAM || Green</div>
+          </article>
+          <article class="price-row">
+            <div class="price">143 U$</div>
+            <div class="product">📲 Motorola G05 4G 256GB / 4GB RAM || Red</div>
+          </article>
+          <article class="price-row">
+            <div class="price">129 U$</div>
+            <div class="product">📲 Motorola G06 4G 128GB / 4GB RAM || Green-Blue</div>
+          </article>
+          <article class="price-row">
+            <div class="price">168 U$</div>
+            <div class="product">📲 Motorola G06 4G 256GB / 8GB RAM S/CARG || Blue</div>
+          </article>
+          <article class="price-row">
+            <div class="price">152 U$</div>
+            <div class="product">📲 Motorola G06 Power 4G 256GB / 4GB RAM || Blue-Green-Khaki</div>
+          </article>
+          <article class="price-row">
+            <div class="price">167 U$</div>
+            <div class="product">📲 Motorola G15 4G 128GB / 4GB RAM || Grey</div>
+          </article>
+          <article class="price-row">
+            <div class="price">163 U$</div>
+            <div class="product">📲 Motorola G15 4G 128GB / 8GB RAM S/CARG || Gray-Green</div>
+          </article>
+          <article class="price-row">
+            <div class="price">196 U$</div>
+            <div class="product">📲 Motorola G15 4G 512GB / 4GB RAM || Azul-Celeste</div>
+          </article>
+          <article class="price-row">
+            <div class="price">168 U$</div>
+            <div class="product">📲 Motorola G15 Power 256GB / 8GB RAM S/CARG || Grey</div>
+          </article>
+          <article class="price-row">
+            <div class="price">202 U$</div>
+            <div class="product">📲 Motorola G17 256GB / 4GB RAM || Celeste-Rosa</div>
+          </article>
+          <article class="price-row">
+            <div class="price">236 U$</div>
+            <div class="product">📲 Motorola G17 Power 256GB / 8GB RAM || Marrón</div>
+          </article>
+          <article class="price-row">
+            <div class="price">174 U$</div>
+            <div class="product">📲 Motorola G35 5G 128GB / 4GB RAM S/CARG || Black-Green</div>
+          </article>
+          <article class="price-row">
+            <div class="price">180 U$</div>
+            <div class="product">📲 Motorola G35 5G 128GB / 8GB RAM S/CARG || Black</div>
+          </article>
+          <article class="price-row">
+            <div class="price">186 U$</div>
+            <div class="product">📲 Motorola G35 5G 256GB / 4GB RAM || Black</div>
+          </article>
+          <article class="price-row">
+            <div class="price">264 U$</div>
+            <div class="product">📲 Motorola G56 5G 256GB / 8GB RAM || Gris-Verde</div>
+          </article>
+          <article class="price-row">
+            <div class="price">269 U$</div>
+            <div class="product">📲 Motorola G56 5G 256GB / 12GB RAM || Verde</div>
+          </article>
+          <article class="price-row">
+            <div class="price">286 U$</div>
+            <div class="product">📲 Motorola G57 Power 5G 256GB / 12GB RAM S/CARG || Cyan-Green</div>
+          </article>
+          <article class="price-row">
+            <div class="price">292 U$</div>
+            <div class="product">📲 Motorola G67 4G 256GB / 4GB RAM || Gris-Lima</div>
+          </article>
+          <article class="price-row">
+            <div class="price">236 U$</div>
+            <div class="product">📲 Motorola G67 Power 5G 128GB / 8GB RAM || Blue-Cilantro-Parachute</div>
+          </article>
+          <article class="price-row">
+            <div class="price">303 U$</div>
+            <div class="product">📲 Motorola G77 256GB / 8GB RAM || Café-Esmeralda</div>
+          </article>
+          <article class="price-row">
+            <div class="price">275 U$</div>
+            <div class="product">📲 Motorola G86 5G 256GB / 8GB RAM || Azul</div>
+          </article>
+          <article class="price-row">
+            <div class="price">258 U$</div>
+            <div class="product">📲 Motorola G86 Power 5G 128GB / 8GB RAM || Golden</div>
+          </article>
+          <article class="price-row">
+            <div class="price">280 U$</div>
+            <div class="product">📲 Motorola G86 Power 5G 256GB / 8GB RAM || Azul-Cereza-Lilac-Verde</div>
+          </article>
+          <article class="price-row">
+            <div class="price">275 U$</div>
+            <div class="product">📲 Motorola G96 5G 128GB / 8GB RAM || Ashleigh Blue-Dresden Blue-Greener</div>
+          </article>
+          <article class="price-row">
+            <div class="price">381 U$</div>
+            <div class="product">📲 Motorola Edge 50 256GB / 12GB RAM || Grey-Green</div>
+          </article>
+          <article class="price-row">
+            <div class="price">325 U$</div>
+            <div class="product">📲 Motorola Edge 40 Pro 256GB / 12GB RAM || Celeste Glaciar</div>
+          </article>
+          <article class="price-row">
+            <div class="price">320 U$</div>
+            <div class="product">📲 Motorola Edge 60 5G 256GB / 8GB RAM S/CARG || Blue</div>
+          </article>
+          <article class="price-row">
+            <div class="price">392 U$</div>
+            <div class="product">📲 Motorola Edge 60 5G 512GB / 12GB RAM S/CARG || Blue</div>
+          </article>
+          <article class="price-row">
+            <div class="price">303 U$</div>
+            <div class="product">📲 Motorola Edge 60 Fusion 5G 256GB / 8GB RAM S/CARG || Blue-Grey</div>
+          </article>
+          <article class="price-row">
+            <div class="price">392 U$</div>
+            <div class="product">📲 Motorola Edge 60 Pro 5G 256GB / 8GB RAM || Blue-Pantone Walnut-Shadow-Sparkling Grape</div>
+          </article>
+          <article class="price-row">
+            <div class="price">504 U$</div>
+            <div class="product">📲 Motorola Edge 70 5G 256GB / 8GB RAM || Green-Grey-Lily Pad</div>
+          </article>
+          <article class="price-row">
+            <div class="price">471 U$</div>
+            <div class="product">📲 Motorola Edge 70 Fusion 5G 256GB / 8GB RAM || Azul-Country Air-Sihouette</div>
+          </article>
+          <article class="price-row">
+            <div class="price">667 U$</div>
+            <div class="product">📲 Motorola Razr 50 5G 512GB / 12GB RAM || Naranja</div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span><b>PUNTO SMART OS</b> · Lista de precios</span>
+      <span>45 productos cargados</span>
+    </footer>
+  </div>
+</body>
+</html>
